@@ -16,10 +16,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const iconOpen  = document.getElementById('iconOpen');
   const iconClose = document.getElementById('iconClose');
 
+  const navbar = document.querySelector('.navbar');
+
   toggle.addEventListener('click', () => {
     const open = menu.classList.toggle('open');
+    navbar.classList.toggle('menu-open', open);
     iconOpen.style.display  = open ? 'none'  : '';
     iconClose.style.display = open ? ''      : 'none';
+    document.body.style.overflow = open ? 'hidden' : '';
   });
 })();
 
@@ -32,8 +36,10 @@ document.querySelectorAll('.nav-anchor').forEach(link => {
     if (target) target.scrollIntoView({ behavior: 'smooth' });
     // Close mobile menu if open
     document.getElementById('mobileMenu').classList.remove('open');
+    document.querySelector('.navbar').classList.remove('menu-open');
     document.getElementById('iconOpen').style.display  = '';
     document.getElementById('iconClose').style.display = 'none';
+    document.body.style.overflow = '';
   });
 });
 

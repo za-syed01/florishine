@@ -95,7 +95,7 @@ img { max-width: 100%; display: block; }
 .navbar.scrolled .menu-toggle { color: var(--text-main); }
 .mobile-menu {
   display: none; position: fixed; inset: 0;
-  width: 100%; height: 100vh;
+  width: 100%; height: 100vh; min-height: 100svh;
   background-color: var(--white);
   z-index: 9990;
   flex-direction: column;
@@ -103,6 +103,12 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 .mobile-menu.open { display: flex; }
+
+/* When menu is open: lift nav-container above overlay and switch to dark colours */
+.navbar.menu-open .nav-container { z-index: 9995; }
+.navbar.menu-open .nav-logo { color: var(--primary); }
+.navbar.menu-open .nav-logo-mark { filter: brightness(0); }
+.navbar.menu-open .menu-toggle { color: var(--primary); }
 .mobile-nav-links { padding: 0 2rem; display: flex; flex-direction: column; gap: 0; width: 100%; max-width: 320px; }
 .mobile-nav-links li { border-bottom: 1px solid rgba(28,20,16,0.07); }
 .mobile-nav-links li:last-child { border-bottom: none; }
