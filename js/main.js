@@ -195,7 +195,7 @@ if (contactForm) contactForm.addEventListener('submit', function(e) {
   const subject = encodeURIComponent('Enquiry from ' + name + ' — Florishine Website');
   const companyLine = company ? '\nCompany: ' + company : '';
   const body    = encodeURIComponent('Name: ' + name + companyLine + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-  window.location.href = 'mailto:info@florishine.com?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:info.florishinebiz22@gmail.com?subject=' + subject + '&body=' + body;
 
   setTimeout(() => {
     document.getElementById('formView').style.display  = 'none';
