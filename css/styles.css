@@ -22,7 +22,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.1; font-weight
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
-.container { max-width: var(--container-max); margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: var(--container-max); margin: 0 auto; }
 
 /* ── Buttons ─────────────────────────────────────────── */
 .btn {
@@ -63,6 +63,7 @@ img { max-width: 100%; display: block; }
 .nav-container {
   display: flex; justify-content: space-between; align-items: center;
   padding: 0 2rem; max-width: var(--container-max); margin: 0 auto;
+  position: relative; z-index: 2;
 }
 .nav-logo {
   font-size: 1.5rem; font-weight: 600; letter-spacing: 2px;
